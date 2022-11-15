@@ -79,7 +79,27 @@ export const constantRoutes = [
           title: '角色管理',
           icon: 'el-icon-user-solid'
         },
-      }
+      },
+      {
+        name: '菜单管理',
+        path: 'sysMenu',
+        component: ()=>import('@/views/system/sysMenu/list'),
+        meta: {
+          title: '菜单管理',
+          icon: 'el-icon-s-unfold'
+        },
+        
+      },
+      {
+        name: '菜单授权',
+        path: 'assignAuth',
+        component: ()=>import('@/views/system/assignAuth/list'),
+        meta: {
+          title: '菜单授权',
+          
+        },
+        hidden: true
+      },
     ]
   },
   // 404 page must be placed at the end !!!
