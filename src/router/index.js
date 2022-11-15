@@ -100,6 +100,15 @@ export const constantRoutes = [
         },
         hidden: true
       },
+      {
+        path: 'assignAuth',
+        component: () => import('@/views/system/sysRole/assignAuth'),
+        meta: {
+          activeMenu: '/system/sysRole',
+          title: '角色授权'
+        },
+        hidden: true,
+      }
     ]
   },
   // 404 page must be placed at the end !!!

@@ -14,6 +14,7 @@
         <el-row style="display:flex">
           <el-button type="primary" icon="el-icon-search" size="mini"  @click="fetchData()">搜索</el-button>
           <el-button icon="el-icon-refresh" size="mini" @click="resetData">重置</el-button>
+          <el-button type="warning" icon="el-icon-baseball" size="mini" @click="showAssignAuth(scope.row)" title="分配权限"/>
         </el-row>
       </el-form>
     </div>
@@ -108,6 +109,10 @@ export default{
     },
     //
     methods:{
+
+        showAssignAuth(row) {
+        this.$router.push('/system/assignAuth?id='+row.id+'&roleName='+row.roleName);
+        },
         //修改
         edit(id){
             //修改弹框
