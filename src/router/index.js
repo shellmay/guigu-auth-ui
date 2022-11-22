@@ -37,11 +37,13 @@ export const constantRoutes = [
     hidden: true
   },
 
+  /*
   {
     path: '/404',
     component: () => import('@/views/404'),
     hidden: true
   },
+  */
 
   {
     path: '/',
@@ -54,6 +56,7 @@ export const constantRoutes = [
       meta: { title: 'Dashboard', icon: 'dashboard' }
     }]
   },
+  /*
   {
     path: '/system',
     component: Layout,
@@ -100,10 +103,14 @@ export const constantRoutes = [
         hidden: true,
       }
     ]
+    
   },
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
+
+*/
 ]
+
 
 const createRouter = () => new Router({
   // mode: 'history', // require service support

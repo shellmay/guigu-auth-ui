@@ -305,11 +305,17 @@
         userId: this.sysUser.id,
         roleIdList: this.userRoleIds
       }
-      roleApi.assignRoles(assginRoleVo).then(response => {
+      roleApi.assignRoles(assginRoleVo)
+      .then(response => {
         this.$message.success(response.message || '分配角色成功')
         this.dialogRoleVisible = false
         this.fetchData(this.page)
-      })
+      }).catch(error => {
+        //test
+            if (error === 'cancel') {
+            this.$message.info('取消删除')
+            }
+        })
     },
 
     }
