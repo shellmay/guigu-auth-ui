@@ -37,13 +37,14 @@ module.exports = {
       errors: true
     },
   //  before: require('./mock/mock-server.js')
-  //增加代理
+  //  增加代理
+  // 打包前把/dev-api改为prod-api
   proxy: {
-    '/dev-api': { // 匹配所有以 '/dev-api'开头的请求路径
+    '/prod-api': { // 匹配所有以 '/dev-api'开头的请求路径
       target: 'http://localhost:8800',
       changeOrigin: true, // 支持跨域
       pathRewrite: { // 重写路径: 去掉路径中开头的'/dev-api'
-        '^/dev-api': ''
+        '^/prod-api': ''
       }
     }
   }
